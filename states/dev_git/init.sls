@@ -13,15 +13,6 @@ ensure_tig_installed:
         - installed
         - name: tig
 
-/home/vagrant/.gitconfig:
-    file.managed:
-        - user: vagrant
-        - group: vagrant
-        - mode: 755
-        - source: salt://dev_git/files/.gitconfig
-        - require:
-            - pkg.installed: ensure_git_installed
-
 /usr/share/git-core/templates/hooks/post-checkout:
     file.managed:
         - user: vagrant
