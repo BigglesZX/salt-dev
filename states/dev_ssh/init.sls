@@ -3,8 +3,9 @@ ensure_ssh_installed:
         - installed
         - name: ssh
 
-/home/vagrant/.ssh/id_rsa:
+copy_private_ssh_key:
     file.managed:
+        - name: /home/vagrant/.ssh/id_rsa
         - user: vagrant
         - group: vagrant
         - mode: 600
@@ -12,8 +13,9 @@ ensure_ssh_installed:
         - require:
             - pkg.installed: ensure_ssh_installed
 
-/home/vagrant/.ssh/id_rsa.pub:
+copy_public_ssh_key:
     file.managed:
+        - name: /home/vagrant/.ssh/id_rsa.pub
         - user: vagrant
         - group: vagrant
         - mode: 600
