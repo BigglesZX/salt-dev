@@ -4,6 +4,8 @@ dotfiles:
         - target: /home/vagrant/dotfiles
         - rev: master
         - identity: /home/vagrant/.ssh/id_rsa
+        - user: vagrant
+        - group: vagrant
         - require:
             - pkg.installed: ensure_git_installed
             - file: copy_private_ssh_key

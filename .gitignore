@@ -1,4 +1,5 @@
 .DS_Store
 .gitconfig
+states/dev_ssh/files/
 states/dev_ssh/files/id_rsa.pub
 states/dev_ssh/files/id_rsa

@@ -9,6 +9,7 @@ copy_private_ssh_key:
         - user: vagrant
         - group: vagrant
         - mode: 600
+        # run `init.sh` in the root of this project to copy your private key into the `files` folder
         - source: salt://dev_ssh/files/id_rsa
         - require:
             - pkg.installed: ensure_ssh_installed
@@ -19,6 +20,7 @@ copy_public_ssh_key:
         - user: vagrant
         - group: vagrant
         - mode: 600
+        # run `init.sh` in the root of this project to copy your public key into the `files` folder
         - source: salt://dev_ssh/files/id_rsa.pub
         - require:
             - pkg.installed: ensure_ssh_installed
