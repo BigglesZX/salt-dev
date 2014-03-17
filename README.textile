@@ -2,7 +2,7 @@ h1. salt-dev
 
 Local environment-centric Salt states for Vagrant development.
 
-Check out into @~/.salt-dev@ for use with Vagrant provisioning.
+Check out into @~/.salt-dev@ for use with Vagrant provisioning. Run @init.sh@ to copy SSH keys from your home directory for transfer to your new box via Salt.
 
 h2. The Functional Four
 
