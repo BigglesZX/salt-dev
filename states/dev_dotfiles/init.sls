@@ -7,6 +7,6 @@ dotfiles:
         - user: vagrant
         - group: vagrant
         - require:
-            - pkg.installed: ensure_git_installed
+            - pkg: ensure_git_installed
             - file: copy_private_ssh_key
             - file: copy_public_ssh_key
